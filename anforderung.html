@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <title>Petershagen/Eggersdorf</title>
+        <style>
+			body {
+			  margin: 10px;
+			}
+		
+            table {
+			  font-family: arial, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+			
+			th {
+			  background-color: #3d3f42;
+			  color: white;
+			}
+
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+			
+			input {
+				float:right;
+				width: 95%;
+				height: 37px;
+				display: inline-block;
+				padding: 5px;
+				padding-left: 5px;
+				margin: 10px;
+				border-radius:2px;
+				border: 1.5px solid #CCCCCC;
+				outline: none;
+				background: white;
+				-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+				-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+				box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+			}
+			
+			.glyphicon {
+				font-size: 30px;
+				line-height: 1.7;
+				display: inline-block;
+				vertical-align: middle;
+				padding-left: 7px;
+				color: darkgreen;
+			}
+			
+			.glyphicon:hover {
+				color: white;
+				text-shadow: 0 0 4px #000000;
+			}
+        </style>
+    </head>
+    <body>
+		<a href="index.html">
+		<span class="glyphicon glyphicon-picture"></span></a>
+		<input id='searchText' type='text' placeholder="Suche ...">
+		
+	
+		<div>
+			<table>
+			  <thead>
+				<th>Baumart</th>
+				<th>Lateinische Bezeichnung</th>
+				<th>Frosttemperatur in °C</th>
+				<th>Hausbaum für große Gärten</th>
+				<th>Hausbaum für kleine Gärten</th>
+				<th>Straßenbaum für breite Straßen</th>
+				<th>Straßenbaum für schmale Straßen</th>
+				<th>Strauch für Einzelstellung im Garten</th>
+				<th>Gehölz für Hecken</th>
+				<th>Gehölz für Grünflächen und Parks</th>
+				<th>Gehölz für Wald und naturnahe Landschaft</th>
+				<th>Hinweis zur Beachtung</th>
+			  </thead>
+			  
+			  <tbody id="row">
+			  </tbody>
+			</table>
+		</div>
+		
+		<script src="anforderungBaum.js"></script>
+	
+	</body>
+</html>

@@ -1,0 +1,117 @@
+#side-bar {
+	cursor:default!important;
+	overflow-x:hidden!important;
+}
+
+h3 {
+	cursor: pointer;
+	color: darkgreen;
+	text-shadow: 1px 1px 1px #c9c9c9;
+}
+
+#btnPeter:hover, #btnEgg:hover {
+	text-shadow: 2px 2px 2px #c9c9c9; 
+}
+
+h3, h4, h5 {
+	font-weight:bold;
+}
+
+#mapdiv {
+	height:100vh;
+}
+
+.col-xs-12, .col-xs-6, .col-xs-4 {
+	padding:3px;
+}
+
+#divProject {
+	background-color: beige;
+}
+
+.errorMsg {
+	padding:0;
+	text-align:center;
+	background-color:darksalmon;
+}
+
+.info { 
+	padding: 8px 10px; 
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	background: rgba(255,255,255,0.9); 
+	box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+	border-radius: 5px; 
+} 
+
+.info h4 { 
+	margin: 0 0 5px; 
+	color: #777; 
+}
+
+#StTyp {
+	font-weight:bold;
+	border-style:solid;
+	border-width:2px;
+	padding:5px 7px;
+	border-radius:3px;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+.infoButton:hover {
+	border-color:black;
+	border-radius:100px;
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glyphHover {
+	font-size: 25px;
+	line-height: 1;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 7px;
+	color: green!important;
+	text-shadow: 1px 1px 1px #c9c9c9;
+}
+
+.glyphHover:hover {
+	color: white!important;
+	text-shadow: 0 0 4px #000000;
+}
+
+.hide {
+	display:none!important;
+}
+
+.show {
+	display:block!important;
+}
+
+.treeAccord {
+	cursor: pointer;
+	-webkit-user-select: none; 
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+
+.treeAccord:hover {
+	text-shadow: 2px 2px 2px #c9c9c9; 
+}
+
+.container:after,.container:before {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+.report {
+	color:#7AA755!important;
+}
+
+.report:hover {
+	text-decoration:none;
+	color:#7AA755;
+	text-shadow: 2px 2px 2px #e2e2e2; 
+}
