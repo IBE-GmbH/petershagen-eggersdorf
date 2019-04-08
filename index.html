@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Petershagen/Eggersdorf</title>
+		
+        <link rel="stylesheet" href="src/leaflet.css">
+        <link rel="stylesheet" href="src/css/bootstrap.css">
+        <link rel="stylesheet" href="src/plugins/L.Control.MousePosition.css">
+        <link rel="stylesheet" href="src/plugins/L.Control.Sidebar.css">
+        <link rel="stylesheet" href="src/plugins/Leaflet.PolylineMeasure.css">
+        <link rel="stylesheet" href="src/plugins/easy-button.css">
+        <link rel="stylesheet" href="src/plugins/leaflet-styleeditor/css/Leaflet.StyleEditor.css">
+        <link rel="stylesheet" href="src/css/font-awesome.min.css">
+        <link rel="stylesheet" href="src/plugins/leaflet.awesome-markers.css">
+        <link rel="stylesheet" href="src/plugins/leaflet-mapkey/MapkeyIcons.css">
+        <link rel="stylesheet" href="src/plugins/leaflet-mapkey/L.Icon.Mapkey.css">
+        <link rel="stylesheet" href="src/plugins/MarkerCluster.css">
+        <link rel="stylesheet" href="src/plugins/MarkerCluster.Default.css">
+        <link rel="stylesheet" href="src/jquery-ui.min.css">
+		<link rel="stylesheet" href="src/plugins/leaflet-opencage/src/css/L.Control.OpenCageSearch.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		
+        <script src="src/leaflet-src.js"></script>
+        <script src="src/jquery-3.2.0.min.js"></script>
+        <script src="src/plugins/L.Control.MousePosition.js"></script>
+        <script src="src/plugins/L.Control.Sidebar.js"></script>
+        <script src="src/plugins/Leaflet.PolylineMeasure.js"></script>
+        <script src="src/plugins/easy-button.js"></script>
+        <script src="src/plugins/leaflet-providers.js"></script>
+        <script src="src/plugins/leaflet-styleeditor/javascript/Leaflet.StyleEditor.js"></script>
+        <script src="src/plugins/leaflet-styleeditor/javascript/Leaflet.StyleForms.js"></script>
+        <script src="src/plugins/leaflet.ajax.min.js"></script>
+        <script src="src/plugins/leaflet.sprite.js"></script>
+        <script src="src/plugins/leaflet.awesome-markers.min.js"></script>
+        <script src="src/plugins/leaflet-mapkey/L.Icon.Mapkey.js"></script>
+        <script src="src/plugins/leaflet.markercluster.js"></script>
+        <script src="src/jquery-ui.min.js"></script>
+        <script src="src/plugins/leaflet-opencage/src/js/L.Control.OpenCageSearch.js"></script>
+		
+		<script src="Standorttypen.js" type="text/javascript"></script>
+		<script src="StOrtTypen.js" type="text/javascript"></script>
+		<script src="Baum_array.js" type="text/javascript"></script>
+		<script src="script.js"></script>
+		
+		<style>
+			
+		</style>
+    </head>
+	
+    <body>
+        <div id="side-bar" class="col-md-3">
+			<h3><span id='btnPeter'>Petershagen</span> / <span id='btnEgg'>Eggersdorf</span></h3><br>
+            <h4>Standorttyp</h4><hr style="margin-top:5px">
+			<span id="StTyp">TYP</span>&emsp;<span id="Standorttyp">KLICKE IN DIE KARTE!</span><br><br>
+			<h4>Baumarten&nbsp;&nbsp;<a class="glyphHover" href="anforderung.html"><span class="glyphicon glyphicon-tree-deciduous"></span><span class="glyphicon glyphicon-tree-conifer"></span><span class="glyphicon glyphicon-grain"></span></a></h4>
+			<hr style="margin-top:5px">
+			
+			<div onclick="myFunction('Accordion1')" class="treeAccord"><h5 onclick="myGlyphFunc('glyphToggle1')"  style="color:darkgreen"><span id="glyphToggle1" class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;gut geeignet</h5></div>
+			<div id="Accordion1" class="container"><span id="geeignet"><p>DEUTSCH (LATEIN) ...</p></span></div>
+			<div onclick="myFunc('Accordion2')" class="treeAccord"><h5 onclick="myGlyphFunc('glyphToggle2')" style="color:darkorange"><span id="glyphToggle2" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;mäßig geeignet</h5></div>
+			<div id="Accordion2" class="container hide"><span id="moeglich"><p>DEUTSCH (LATEIN) ...</p></span></div>
+			<div onclick="myFunc('Accordion3')" class="treeAccord"><h5 onclick="myGlyphFunc('glyphToggle3')" style="color:darkred"><span id="glyphToggle3" class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;nicht geeignet</h5></div>
+			<div id="Accordion3" class="container hide"><span id="ungeeignet"><p>DEUTSCH (LATEIN) ...</p></span></div><hr>
+			
+			<a class="report" href="Agenda21-Bericht Klimaangepasste Gehölze.pdf" target="_blank"><span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Agenda21-Bericht Klimaangepasste Gehölze</a><br><br><br>
+			<!--<h5>Koordinaten: <span id='mouse-location'></span></h5>-->
+		</div>
+		
+        <div id="mapdiv" class="col-md-12">
+		</div>
+		
+		<script>
+			function myFunction(id) {
+				var accord = document.getElementById(id);
+				if (accord.style.display === "none") {
+					accord.style.display = "block";
+				} else {
+					accord.style.display = "none";
+				}
+			}
+			
+			function myFunc(id) {
+				var accord = document.getElementById(id);
+				if (accord.className.indexOf("show") == -1) {
+					accord.className += "show";
+				} else {
+					accord.className = accord.className.replace("show", "");
+				}
+			}
+			
+			function myGlyphFunc(id) {
+				var element = document.getElementById(id);
+				element.classList.toggle("glyphicon-chevron-right");
+				element.classList.toggle("glyphicon-chevron-down");
+			}
+		</script>
+    </body>
+</html>
