@@ -64,8 +64,6 @@ $(document).ready(function(){
 	});
 	}).addTo(mymap);
 	
-	ctlSearch = L.Control.openCageSearch({position:'topleft', key: '3c38d15e76c02545181b07d3f8cfccf0',limit: 10}).addTo(mymap);
-	
 	popPeter = L.popup({maxWidth:200,keepInView:true});
 	popPeter.setLatLng([52.523215, 13.779217]);
 	popPeter.setContent("<h4>Gemeinde Petershagen</h4>");
